@@ -29,42 +29,36 @@ We wanted our research to be impactful and revolve around some type of societal 
 
 When looking at our datasets, we realized that there are a lot of factors that contribute to poverty in the United States. One of our datasets broke down the living wage for different areas depending on the number of kids and working adults. We chose to look at which area requires you to have the highest living wage for a 2 kid, 2 working adult house hold and that was San Jose, California. Minimum wage plays a huge part in poverty so majority of the values we looked at focused on this. For lowest minimum wage, there are 4 states that have no minimum wage but just abide by the federal minimum wage. The mean state minimum wage is $6.44/hr which is still lower than the federal minimum wage. The state with the highest minimum wage is Washington DC. All these values are important to understand how minimum wage can effect poverty level. Finally we looked at the area with the highest density which was New York, New York. It will be interested to see if there is a correlation between city density and their minimum wage for our project.
 
-#```{r summaryinfo, echo=FALSE}
-#plot("summaryinfo.R")
-#```
+```{r, echo=FALSE}
+summaryinfo
+```
 # Table Summary
 
-#```{R}
-#plot()
-#```
+```{r, echo=FALSE}
+
+```
 
 # Chart 1
 
 The purpose of including this chart is to promote visualization and conceptualization of whether or not there is correlation between the 5 highest/lowest state populations and reported investment on their youth. This scatterplot specifically highlights the socio-economic aspect of living costs in the US. From observation of this chart, there is a strong positive association between the variables state population and spending on kids. This chart revealed that in the year 2010, a couple of states which include New York, Illinois, and Georgia despite having lower populations have higher spendings amounts on their kids in comparison to some other states like Texas and Arizona.
 
-```{r chart1, echo=FALSE}
-ggplot(pop_vs_kids_spending_2010, aes(x=kids_spending_2010, y = state_populations_2010, format(scientific = FALSE))) +
-  geom_point(aes(col = state)) + 
-  ylab("State Population") +
-  xlab("Spending on Kids") +
-  ggtitle("Populations and Kids Spending in 2010")
+```{r, echo=FALSE}
+pop_vs_kids_spending
 ```
 
 # Chart 2
 
 This map of the US encourages better understanding of the different levels of living wage from the reports of our living wage dataset and its variability across the different states. This map seeks to find any economic patterns of living wage levels in the different US regions that may help us determine the relationship between cost of living and living wage. Using the highest living wages reported in each state, we can see that the middle section of the US fall within the low range of living wages. On the other hand, some states near the coasts, like California, Washington, New York, Massachusetts, etc. have living wages well above $19. Recognizable patterns like this allow us to conclude that the cost of living in these states are much higher than the ones depicted in a light shade of green at the center of the US.
 
-```{r chart2, echo=FALSE}
-living_wage_by_state_map <- plot_usmap(data=living_wage_by_state, values = "one_adult_no_kids_living_wage") +
-  labs(title = "One Adult's Living Wage Across the US Cities") +
-  scale_fill_continuous(name = "Living Wage ($)", low = "white", high = "green")
+```{r, echo=FALSE}
+living_wage_by_state_map
 ```
 
 # Chart 3
 
 The purpose of including this chart is to compare the living wage and minimum wage in 2020, in a select number of states. The chart clearly shows that the living wage for one adult with no kids is higher than the minimum wage in every state depicted in the graph. So, getting a minimum wage job would simply not be enough to reach the living wage, and gives one reason why poverty is so high in America.
 
-```{r chart3, echo=FALSE}
+```{r, echo=FALSE}
 ggplot(chart_df, aes(fill = name, y = value, x = State,)) +
   geom_bar(position = "dodge", stat = "identity") +
   labs(title = "Living Wage vs. Minimum Wage", y = 'Dollars') +
