@@ -51,3 +51,5 @@ living_and_min_wage <- ggplot(chart_df, aes(fill = name, y = value, x = State,))
   guides(fill = guide_legend(title = "Type")) +
   scale_fill_manual(values = c("darkgreen", "darkseagreen4"))
 
+
+
