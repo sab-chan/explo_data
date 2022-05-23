@@ -35,24 +35,6 @@ Calculates the mean/average home value index for each state by year
 kable(Zillow_mean_df)
 ```
 
-Calculates the total state spending on kids for each state by year
-
-```{r total_kids_spending, echo=FALSE}
-kable(total_kids_spending)
-```
-
-Calculates the state with the highest minimum wage from every year in the dataset 
-
-```{r highest_each_state, echo=FALSE}
-kable(highest_each_state)
-```
-
-Calculates the state with the lowest minimum wage
-
-```{r lowest_each_state, echo=FALSE}
-kable(lowest_each_state)
-```
-
 # Chart 1
 
 The purpose of including this chart is to promote visualization and conceptualization of whether or not there is correlation between the 5 highest/lowest state populations and reported investment on their youth. This scatterplot specifically highlights the socio-economic aspect of living costs in the US. From observation of this chart, there is a strong positive association between the variables state population and spending on kids. This chart revealed that in the year 2010, a couple of states which include New York, Illinois, and Georgia despite having lower populations have higher spendings amounts on their kids in comparison to some other states like Texas and Arizona.
