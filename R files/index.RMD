@@ -20,7 +20,7 @@ source("chart3.R")
 Poverty and socio-economic statuses and how it affects people within the United States.
 
 # Why are you interested in this field/domain:
-We wanted our research to be impactful and revolve around some type of societal issue. After discussing, we concluded that we wanted our project to be about poverty since it is one of the main living issues specifically in Seattle and United States overall.
+We wanted our research to be impactful and revolve around some type of societal issue. After discussing, we concluded that we wanted our project to be about poverty since it is one of the main living issues specifically in Seattle and United States overall. Additionally, we wanted to understand more about the factors that impact those who are forced to live in poverty which is what we explore in this assignment.
 
 ## Summary Paragraph
 
