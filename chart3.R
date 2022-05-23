@@ -3,9 +3,9 @@ library(tidyverse)
 library(ggplot2)
 
 # bring in datasets
-min_wage_df <- read.csv("minwagedata.csv")
+min_wage_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/Minimum Wage Data.csv")
 
-living_wage_df <- read.csv("livingwage.csv")
+living_wage_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/livingwage.csv")
 
 # create dataset to use in chart
 
@@ -45,7 +45,7 @@ chart_df[chart_df$State == "Oregon", "State"] <- "OR"
 
 
 # create chart
-ggplot(chart_df, aes(fill = name, y = value, x = State,)) +
+living_and_min_wage <- ggplot(chart_df, aes(fill = name, y = value, x = State,)) +
   geom_bar(position = "dodge", stat = "identity") +
   labs(title = "Living Wage vs. Minimum Wage", y = 'Dollars') +
   guides(fill = guide_legend(title = "Type")) +

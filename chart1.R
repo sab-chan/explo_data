@@ -1,6 +1,6 @@
-home_index <- read.csv("ZHVI.csv")
-living_wage <-read.csv("livingwage.csv")
-kids_spending <- read.csv("State-by-State Spending on Kids.csv")
+home_index <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/ZHVI.csv")
+living_wage <-read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/livingwage.csv")
+kids_spending <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/State-by-State Spending on Kids.csv")
 
 library(dplyr)
 library(ggplot2)

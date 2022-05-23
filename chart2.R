@@ -1,13 +1,13 @@
-home_index <- read.csv("ZHVI.csv")
-living_wage <-read.csv("livingwage.csv")
-kids_spending <- read.csv("State-by-State Spending on Kids.csv")
+home_index <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/ZHVI.csv")
+living_wage <-read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/livingwage.csv")
+kids_spending <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/State-by-State Spending on Kids.csv")
 
 library(dplyr)
 library(usmap)
 
 living_wage_by_state <- living_wage %>%
   group_by(state)%>%
-  filter(one_adult_no_kids_living_wage == max(one_adult_no_kids_living_wage))
+  filter(one_adult_no_kids_living_wage == max(one_adult_no_kids_living_wage)) %>%
   summarise(state, one_adult_no_kids_living_wage)
 
 living_wage_by_state_map <- plot_usmap(data=living_wage_by_state, values = "one_adult_no_kids_living_wage") +

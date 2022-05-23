@@ -4,11 +4,11 @@ library(tidyverse)
 
 #create dataframe
 
-living_wage_df <- read.csv("livingwage.csv")
+living_wage_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/livingwage.csv")
 living_wage_df <- living_wage_df %>%
   unite("location", city:state, sep= ", ",remove = FALSE)
-min_wage_df <- read.csv("minwage.csv")
-state_spending_df <- read.csv("statespending.csv")
+min_wage_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/Minimum Wage Data.csv")
+state_spending_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/State-by-State Spending on Kids.csv")
 
 #summary functioni
 summary_info <- list()

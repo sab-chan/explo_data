@@ -4,13 +4,13 @@ library(dplyr)
 library(tidyverse)
 
 # bring in datasets
-Zillow_df <- read.csv("Zillow.csv")
+Zillow_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/ZHVI.csv")
 
-statespendingKids_df <- read.csv("statespendingonkids.csv")
+statespendingKids_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/State-by-State Spending on Kids.csv")
 
-min_wage_df <- read.csv("minwagedata.csv")
+min_wage_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/Minimum Wage Data.csv")
 
-living_wage_df <- read.csv("livingwage.csv")
+living_wage_df <- read.csv("/Users/tiaesperanzate/final-projects-sab-chan/Data/livingwage.csv")
 
 # combine and narrow down features
 
