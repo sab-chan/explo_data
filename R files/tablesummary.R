@@ -70,4 +70,3 @@ highest_each_state <- wage_df %>%
 lowest_each_state <- wage_df %>%
   group_by(Year) %>%
   filter(State_minimum_wage == min(State_minimum_wage))
-
